@@ -3240,6 +3240,19 @@ char-regex@^2.0.0:
   resolved "https://registry.npmjs.org/char-regex/-/char-regex-2.0.1.tgz"
   integrity sha512-oSvEeo6ZUD7NepqAat3RqoucZ5SeqLJgOvVIwkafu6IP3V0pO38s/ypdVUmDDK6qIIHNlYHJAKX9E7R7HoKElw==
 
+"chatapp@file:..":
+  version "1.0.0"
+  resolved "file:.."
+  dependencies:
+    bcryptjs "^2.4.3"
+    cookie-parser "^1.4.6"
+    dotenv "^16.4.5"
+    express "^4.19.2"
+    jsonwebtoken "^9.0.2"
+    mongoose "^8.3.3"
+    nodemon "^3.1.0"
+    socket.io "^4.7.5"
+
 check-types@^11.2.3:
   version "11.2.3"
   resolved "https://registry.npmjs.org/check-types/-/check-types-11.2.3.tgz"
