@@ -1,3 +1,4 @@
+const path=require("path")
 const express=require('express')
 const dotenv=require('dotenv')
 const cookieParser=require("cookie-parser")
@@ -20,6 +21,13 @@ app.use("/api/auth",authRoutes)
 app.use("/api/messages",messageRoutes)
 app.use("/api/users",userRoutes)
 
+app.use(express.static(path.join(__dirname,"/frontend/dist")))
+
+ __dirname=path.resolve();
+app.get("*",(req,res)=>{
+  res.sendFile(path.join(__dirname,"frontend","dist","index.html"))
+})
+
 app.get('/', (req, res) => {
     res.send("hiii");
   });
@@ -27,7 +35,11 @@ app.get('/', (req, res) => {
 
 const PORT=process.env.PORT || 5000
 
+
 server.listen(PORT,()=>{
     connectToMongoDB()
     console.log(`Server started on Port ${PORT}`)
 })
+
+
+
