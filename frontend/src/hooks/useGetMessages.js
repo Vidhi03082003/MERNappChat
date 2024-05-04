@@ -10,7 +10,7 @@ const useGetMessages = () => {
             setLoading(true)
             try {
                 const token = localStorage.getItem('token');
-                const res = await fetch(`http://localhost:5000/api/messages/${selectedConversation._id}`, {
+                const res = await fetch(`https://mernappchat-3.onrender.com/api/messages/${selectedConversation._id}`, {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({  token })

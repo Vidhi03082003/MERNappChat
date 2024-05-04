@@ -12,7 +12,7 @@ const useGetConversations = () => {
                 // const res = await fetch("http://localhost:5000/api/users")
 
                 const token = localStorage.getItem('token');
-                const res = await fetch("http://localhost:5000/api/users", {
+                const res = await fetch("https://mernappchat-3.onrender.com/api/users", {
                     method: 'POST', // or 'PUT', 'PATCH', etc. depending on your server-side implementation
                     headers: {
                         'Content-Type': 'application/json'
